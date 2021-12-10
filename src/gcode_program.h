@@ -215,7 +215,7 @@ namespace gpr {
       } else {
 	assert(false);
       }
-
+        return false;
     }
 
     void print_comment(std::ostream& stream) const {

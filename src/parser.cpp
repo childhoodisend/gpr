@@ -158,7 +158,7 @@ namespace gpr {
     }
   }
   
-  string parse_line_comment_with_delimiter(string sc, parse_stream<string>& s) {
+  string parse_line_comment_with_delimiter(string /*sc*/, parse_stream<string>& s) {
     string text = "";
     while (s.chars_left()) {
       text += s.next();
