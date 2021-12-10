@@ -6,10 +6,10 @@
 
 namespace gpr {
 
-  std::vector<std::string> lex_block(const std::string& block_text);
+    std::vector<std::string> lex_block(const std::string &block_text);
 
-  gcode_program parse_gcode(const std::string& program_text);
+    gcode_program parse_gcode(const std::string &program_text);
 
-  gcode_program parse_gcode_saving_block_text(const std::string& program_text);
+    gcode_program parse_gcode_saving_block_text(const std::string &program_text);
 
 }
