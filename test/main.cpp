@@ -4,16 +4,16 @@
 
 #include "catch.hpp"
 
-int main( int argc, char* const argv[] ) {
+int main(int argc, char *const argv[]) {
 
-  Catch::Timer timer;
-  timer.start();
+    Catch::Timer timer;
+    timer.start();
 
-  int result = Catch::Session().run( argc, argv );
+    int result = Catch::Session().run(argc, argv);
 
-  double elapsed_time = timer.getElapsedSeconds();
+    double elapsed_time = timer.getElapsedSeconds();
 
-  std::cout << "runtime: " << timer.getElapsedSeconds() <<  " seconds " << std::endl;
+    std::cout << "runtime: " << timer.getElapsedSeconds() << " seconds " << std::endl;
 
-  return result;
+    return result;
 }

@@ -5,9 +5,9 @@ sudo: false
 addons:
   apt:
     sources:
-    - ubuntu-toolchain-r-test
+      - ubuntu-toolchain-r-test
     packages:
-    - g++-4.9
+      - g++-4.9
 
 before_install:
   - cmake .
@@ -20,4 +20,4 @@ compiler:
   - gcc
 
 os:
-- linux
+  - linux
