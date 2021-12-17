@@ -153,7 +153,7 @@ namespace gpr {
             default:
                 cout << "Invalid c = " << c << endl;
                 cout << "Invalid c as int = " << ((int) c) << endl;
-                cout << "Is EOF? " << (((int) c) == EOF) << endl;
+                //cout << "Is EOF? " << (((int) c) == EOF) << endl;
                 assert(false);
         }
     }
