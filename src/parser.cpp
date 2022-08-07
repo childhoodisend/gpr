@@ -246,12 +246,15 @@ namespace gpr {
             string cs = parse_line_comment_with_delimiter(";", s);
             return chunk(';', ';', cs);
         } else {
-            string next_next = *(s.remaining() + 1);
+            if (s.remaining() + 1 != s.end()) {
+                string next_next = *(s.remaining() + 1);
 
-            if (!is_num_char(next_next[0])) {
-                return parse_isolated_word(s);
+                if (!is_num_char(next_next[0])) {
+                    return parse_isolated_word(s);
+                }
+                return parse_word_address(s);
             }
-            return parse_word_address(s);
+            return parse_isolated_word(s);
         }
 
     }
