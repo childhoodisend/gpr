@@ -130,7 +130,7 @@ namespace gpr {
             case 's':
             case 'q':
             case 'E':
-                return make_double_address(parse_double(s));
+                //return make_double_address(parse_double(s));
             case 'G':
             case 'H':
             case 'M':
@@ -149,7 +149,8 @@ namespace gpr {
             case 'p':
             case 'd':
             case 'l':
-                return make_int_address(parse_int(s));
+                return make_double_address(parse_double(s));
+                //return make_int_address(parse_int(s));
             default:
                 cout << "Invalid c = " << c << endl;
                 cout << "Invalid c as int = " << ((int) c) << endl;
