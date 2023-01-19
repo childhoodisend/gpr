@@ -51,7 +51,7 @@ namespace gpr {
             }
 
             if (other.tp() == ADDRESS_TYPE_DOUBLE) {
-                return other.double_value() == double_value();
+                return std::abs(other.double_value() - double_value()) < std::numeric_limits<double>::epsilon();
             }
 
             return other.int_value() == int_value();
@@ -348,12 +348,12 @@ namespace gpr {
             for (auto i: *this) { stream << i << " "; }
         }
 
-        int size() const { return chunks.size(); }
+        int size() const { return (int) chunks.size(); }
 
         const chunk &get_chunk(const int i) {
             assert(i < size());
 
-            return chunks[i];
+            return chunks[(size_t) i];
         }
 
         bool is_deleted() const { return slashed_out; }
@@ -385,7 +385,7 @@ namespace gpr {
         gcode_program(const std::vector<block> &p_blocks) :
                 blocks(p_blocks) {}
 
-        int num_blocks() const { return blocks.size(); }
+        int num_blocks() const { return (int) blocks.size(); }
 
         block get_block(const size_t i) {
             assert(i < blocks.size());

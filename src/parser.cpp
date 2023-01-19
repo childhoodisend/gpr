@@ -47,7 +47,7 @@ namespace gpr {
         }
 
         typename vector<T>::const_iterator remaining() {
-            return s.begin() + i;
+            return s.begin() + (long) i;
         }
 
     };
@@ -336,7 +336,7 @@ namespace gpr {
                 blocks.push_back(b);
             }
 
-            line_start += line.size() + 1;
+            line_start += (long) line.size() + 1;
         }
         return blocks;
     }
