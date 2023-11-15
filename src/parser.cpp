@@ -157,6 +157,8 @@ namespace gpr {
                 //cout << "Is EOF? " << (((int) c) == EOF) << endl;
                 assert(false);
         }
+        assert(false);
+        return make_double_address(parse_double(s));
     }
 
     string parse_line_comment_with_delimiter(string /*sc*/, parse_stream<string> &s) {
